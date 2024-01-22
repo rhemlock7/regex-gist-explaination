@@ -1,12 +1,14 @@
 # Computer Science for JavaScript: Regex Tutorial
 
-Introductory paragraph (replace this with your text)
+Regex (Regular Expressions) is a powerful tool enabling developers to create patterns for string matching. 
+
+In this tutorial, we provide a comprehensive breakdown of the regex required to validate a VISA credit card. This regex ensures that a given string represents a valid VISA credit card numberso that customers do not enter fake credit card numbers.
+
+We will dive into components of regex, such as anchors, quantifiers, grouping constructs, bracket expressions, character classes, the OR operator, flags, and character escapes.
 
 ## Summary
 
-I am providing a breakdown of the regex needed to validate a VISA credit card. The VISA credit card regex ensures that a given string represents a valid VISA credit card number. 
-
-The pattern checks for a string that starts with a '4' and is followed by 12 to 15 digits. This regex captures the common format of VISA credit card numbers:
+The pattern below checks for a string that starts with a '4' and is followed by 12 to 15 digits. This regex captures the common format of VISA credit card numbers:
 
     /^4[0-9]{12,15}$/
 
@@ -100,10 +102,25 @@ For example, cat|dog matches either "cat" or "dog".
 This flexibility is particularly useful when there are several valid alternatives for a particular pattern.
 
 ### Flags
-Flags in regular expressions modify the behavior of the pattern matching process. For example, the i flag makes the pattern case-insensitive, allowing for matches regardless of letter case. Flags offer control over case sensitivity, global search, and other aspects, tailoring the matching behavior to specific requirements.
+Flags in regular expressions modify the behavior of the pattern matching process. Flags offer control over case sensitivity, global search, and other aspects, tailoring the matching behavior to specific requirements.
+
+Common flags include "g" for global search, "i" for case-insensitive search, and "m" for multiline matching. There are no flags in our VISA credit card example.
+
 
 ### Character Escapes
-Character escapes in regular expressions enable the use of special characters as literal characters. For instance, \. matches a literal period instead of interpreting it as a wildcard character. Character escapes are crucial when dealing with characters that carry special meanings in regular expressions, ensuring their interpretation as literal characters within the pattern.
+In regex, character escapes are used to represent characters with special meanings, allowing them to be matched literally. The backslash \ serves as the escape character, followed by a character or sequence that represents a special character.
+
+These escapes are useful when you want to match specific characters literally, even if they have special meanings in regex. For instance, \d allows you to match a digit without interpreting it as a quantifier or special character.
+
+Here are a few examples of Character Escapes:
+- \d - Digit Escape:
+    - Matches any digit (equivalent to [0-9]).
+- \w - Word Character Escape:
+    - Matches any word character (alphanumeric or underscore).
+- \s - Whitespace Character Escape:
+    - Matches any whitespace character (spaces, tabs, line breaks).
+- \\. - Dot Escape:
+    - Matches a literal dot (period).
 
 ## Author
-A short section about the author with a link to the author's GitHub profile (replace with your information and a link to your profile)
+My name is Ryan Hemlock. I'm a web developer student with the University of Pennsylvania's LPS coding bootcamp. You can find my GitHub profile here: https://github.com/rhemlock7 
