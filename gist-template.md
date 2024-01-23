@@ -1,18 +1,22 @@
 # Computer Science for JavaScript: Regex Tutorial
 
-Regex (Regular Expressions) is a powerful tool enabling developers to create patterns for string matching. 
+Regular Expressions (Regex) are a powerful tool enabling developers to create patterns for string matching. 
 
-In this tutorial, we provide a comprehensive breakdown of the regex required to validate a VISA credit card. This regex ensures that a given string represents a valid VISA credit card numberso that customers do not enter fake credit card numbers.
+In this tutorial, I provide a comprehensive breakdown of the regex required to validate a VISA credit card. This regex ensures that a given string represents a valid VISA credit card so that customers do not enter fake credit cards and steal a company's product.
 
 We will dive into components of regex, such as anchors, quantifiers, grouping constructs, bracket expressions, character classes, the OR operator, flags, and character escapes.
 
 ## Summary
 
-The pattern below checks for a string that starts with a '4' and is followed by 12 to 15 digits. This regex captures the common format of VISA credit card numbers:
+The regex pattern needed to find a VISA credit card looks something like this:
 
     /^4[0-9]{12,15}$/
 
-This regex helps businesses validate proper payment methods before giving away their products. If a string matches this expression it will return a boolean (true/false). This helps developers when creating conditional statements later on.
+The pattern above checks for a string that starts with a '4' and is followed by 12 to 15 digits. This regex captures the common format of VISA credit cards.
+
+If we wanted to find any credit card, our regex would have to be much broader. All VISA credit cards start with the number 4 followed by 12-15 digits, making it easier to identify.
+
+If a string matches this expression it will return a boolean (true/false). This helps developers when creating conditional statements later on.
 
 ## Table of Contents
 
@@ -26,7 +30,7 @@ This regex helps businesses validate proper payment methods before giving away t
 - [Character Escapes](#character-escapes)
 
 ## Regex Components
-Regex components are the building blocks for creating regular expressions. They include various symbols, characters, and constructs that form a pattern for matching strings.
+Regex components are the building blocks for creating regular expressions. They include various symbols/characters that form a pattern for matching strings.
 
 Here's a breakdown from our VISA credit card example earlier:
 
@@ -34,7 +38,7 @@ Here's a breakdown from our VISA credit card example earlier:
 
 - ^: Anchors the pattern at the beginning of the string.
 - 4: Matches the digit '4', indicating VISA.
-- [0-9]{12,15}: Matches between 12 and 15 digits (0-9).
+- [0-9]{12,15}: Matches between 12 and 15 digits from (0-9).
 - $: Anchors the pattern at the end of the string.
 - /: Wraps the entire expression to indicate it is regex.
 
@@ -123,4 +127,4 @@ Here are a few examples of Character Escapes:
     - Matches a literal dot (period).
 
 ## Author
-My name is Ryan Hemlock. I'm a web developer student with the University of Pennsylvania's LPS coding bootcamp. You can find my GitHub profile here: https://github.com/rhemlock7 
+My name is Ryan Hemlock. I am a web developer student with the University of Pennsylvania's LPS coding bootcamp. You can find my GitHub profile here: https://github.com/rhemlock7 
